@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- Links do menu que chamam a função showContent com os IDs dos elementos e os IDs dos parágrafos -->
+            <li><a href="#" onclick="showContent('content1', 'sobreMim')">Sobre mim</a></li>
+            <li><a href="#" onclick="showContent('content2', 'formacao')">Formação</a></li>
+            <li><a href="#" onclick="showContent('content3', 'portfolio')">Portfólio</a></li>
+            <li><a href="#" onclick="showContent('content4', 'contato')">Contato</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <!-- Div com o texto "Sobre mim" -->
+        <div id="content1" class="content-item" data-text="Meu nome é Venícios. Tenho 28 anos. Estou há um ano estudando dados. Tudo começou quando precisei resolver um problema no trabalho. Aprendi o básico de Power Bi, e me apaixonei pela área. Quando não estou estudando ou trabalhando, gosto de jogar Valorant, assistir um filme com minha namorada ou sair.">
+            <p id="sobreMim"></p>
+        </div>
+        <!-- Div com o texto "Formação" -->
+        <div id="content2" class="content-item" data-text="Formações:<br>- Graduando em História pela UFPR;<br>- Graduando em Banco de Dados pela Uninter;<br>- Realizado diversos cursos relacionados a engenharia de dados (acesse o próximo link);<br>- Inglês Avançado;">
+            <p id="formacao"></p>
+        </div>
+        <!-- Div com o texto "Portfólio" e um botão que abre o LinkedIn em uma nova aba -->
+        <div id="content3" class="content-item" data-text="Confira meu LinkedIn abaixo:">
+            <p id="portfolio"></p>
+            <button onclick="window.open('https://www.linkedin.com/in/ven%C3%ADcios-alc%C3%A2ntara-oliveira-5903b4202/', '_blank')">Meu LinkedIn</button>
+        </div>
+        <!-- Div com o formulário de contato -->
+        <div id="content4" class="content-item">
+            <form id="contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Importação do arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
